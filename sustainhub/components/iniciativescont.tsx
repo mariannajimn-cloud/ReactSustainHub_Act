@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { SAMPLE_INITIATIVES, Initiative } from '../data/initiatives';
 import InitiativeCard from './initiativecard';
 
-export default function InitiativesManager() {
+const InitiativesCont = () => {
   const [initiatives, setInitiatives] = useState<Initiative[]>(SAMPLE_INITIATIVES);   // alamcena lista de proyectos y permite actializar con el setinicitives
   // funcion votos, recibe el evento e y el ID del proyecto al que le dieron clic.
   const sumVotes = (e: React.MouseEvent, id: string) => {
@@ -30,3 +30,5 @@ export default function InitiativesManager() {
     </div>
   );
 }
+
+export default InitiativesCont; 

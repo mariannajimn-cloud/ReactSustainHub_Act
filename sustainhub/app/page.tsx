@@ -1,5 +1,5 @@
 'use client';
-import InitiativesManager from '../components/iniciativesmanager';
+import InitiativesCont from '../components/iniciativescont';
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-zinc-900 mb-6">Climate Action Initiatives</h1>
         
         {/*  mandamos a llamar a nuestro bloque de lógica y visual */}
-        <InitiativesManager />
+        <InitiativesCont />
       </main>
     </div>
   );
