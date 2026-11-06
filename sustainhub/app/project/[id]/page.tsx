@@ -5,7 +5,6 @@ import  DetailsPage  from '../../../components/detailspage';
 
 const individualPage = async({params} : {params: Promise<{id: string}>}) => {
     const {id} = await params;
-
     const individual = SAMPLE_INITIATIVES.find((item) => item.id === id);
 
     return(
