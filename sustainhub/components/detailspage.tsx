@@ -1,7 +1,7 @@
 import { Initiative } from '../data/initiatives';
 
 
-const DetailsPage = async({initiative, onBack, onVote} : {initiative : Initiative | undefined, onBack: () => void, onVote: (id: string) => void }) => {
+const DetailsPage = ({initiative, onBack} : {initiative : Initiative | undefined, onBack: () => void}) => {
 
     if(!initiative){
         
@@ -34,20 +34,9 @@ const DetailsPage = async({initiative, onBack, onVote} : {initiative : Initiativ
                     </div>
                 </div>
 
-                <div className="px-8 py-10">
-                    <h3>Initiative Description</h3>
+                <div className="px-3 py-10">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">Initiative Description</h3>
                     <p className="text-gray-700 leading-relaxed text-lg mb-10"> {initiative.description}</p>
-
-                    <div className="bg-gray-50 rounded-2xl p-6 flex items-center justify-between border border-gray-200">
-                        <div className="flex items-center gap-3">
-                            <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">Curent Votes</p>
-                            <p className="text-2xl font-bold text-gray-900">{initiative.votes}</p>
-                        </div>
-
-                        <button onClick={() => onVote(initiative.id)} className="bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white px-8 py-3 rounded-xl font-bold transition-colors shadow-md text-lg">
-                            VOTE
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
