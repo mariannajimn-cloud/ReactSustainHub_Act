@@ -1,5 +1,5 @@
 'use client';
-import InitiativesManager from '../components/iniciativescont';
+import InitiativesManager from '../components/iniciativesmanager';
 
 export default function Home() {
   return (

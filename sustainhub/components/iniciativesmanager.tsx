@@ -23,9 +23,9 @@ export default function InitiativesManager() {
         {/*  método .map() para recorrer la lista y que tenga diseño cda iniciatve */}
         {initiatives.map((item) => (
             <InitiativeCard 
-            key={item.id}          // llave única para identificar elementos de una lista
-              item={item}            // le pasamos el objeto con la info de la iniciativa a la tarjeta
-              onVote={sumVotes}/>  // pasamos la función de los votos para que el botón sepa qué hacer
+                key={item.id}          // llave única para identificar elementos de una lista
+                item={item}            // le pasamos el objeto con la info de la iniciativa a la tarjeta
+                onVote={sumVotes}/>  // pasamos la función de los votos para que el botón sepa qué hacer
       ))}
     </div>
   );
